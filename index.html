@@ -4,11 +4,13 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<!-- TITULO DE LA PRESENTACIÓN -->
+		<title>Presentación HTML + Markdown</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- TEMA ELEGIDO DE FONDO -->
+		<link rel="stylesheet" href="css/theme/league.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,23 +27,152 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+					<section data-markdown
+					         data-separator="^___"
+					         data-separator-vertical="^---"
+					         data-separator-notes="^Note:"
+					         data-charset="iso-8859-15">
+<!-- // ------------------------------------------------------------- -->
+ ## Proyecto Final - Ingenieria Electrónica 
+ [![UTNBA](https://actividades.frba.utn.edu.ar/imagenes/logo-con-margenes.jpg)](https://www.frba.utn.edu.ar/)
+___
+
+### Sistema de captación analogica y conversión MIDI
+Para más información sobre estandar MIDI:
+
+[![MIDI|logo](https://www.midi.org/images/logos/midi-black-logo.png)](https://www.midi.org/)
+
+---
+
+  - El sistema capta señal analogica mediante microfonos individuales por cuerda (para guitarra o bajo)
+  - Dicha información se procesa individualmente y se traduce a un mensaje MIDI con codigos representativos de la interpretación del músico
+  - El mensaje se transmite a cualquier dispositivo con capacidades previstas por el estandar MIDI
+  - En este punto, las posibilidades dependen de la creatividad del artista
+
+___
+
+### Contenido ###
+
+Este repositorio contiene los documentos requeridos por la catedra de [Proyecto Final](http://electron.frba.utn.edu.ar/materias.php?cod=95-0441#marca) de la carrera de [Ingenieria Electrónica](http://electron.frba.utn.edu.ar/)
+
+| Carpeta | Contenido |
+| ------ | ------ |
+| Iniciación | Abstract o anteproyecto |
+| Planificación | Plan de Gestion |
+| Ejecución | Diagrama en Bloques, normas, ensayos, etc |
+| Control | Minutas y fechas |
+| Cierre | Manual de Usuario, Mantenimiento, Economico, Protocolo de aceptacion |
+
+___
+
+> Lo antedicho se actualiza respecto a los logros
+> y a petición de la catedra.
+> Para pruebas y avances respecto a la realización
+> por etapas del proyecto, el grupo de trabajo 
+> cuenta con sus repositorios y sistemas de datos
+> de acceso compartido, donde no se velará tanto 
+> por la prolijidad como asi se hará por los resultados.
+___
+
+# Comandos Utiles para git #
+Git global setup
+```sh
+git config --global user.name "Agustin Matias Ortiz"
+git config --global user.email "aortiz@est.frba.utn.edu.ar"
+```
+---
+
+Create a new repository
+```sh
+git clone https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
+cd captor_midi
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+```
+---
+
+Existing folder
+```sh
+cd existing_folder
+git init
+git remote add origin https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+---
+
+Existing Git repository
+```sh
+cd existing_repo
+git remote add origin https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
+git push -u origin --all
+git push -u origin --tags
+```
+___
+
+Siguiendo con la prueba... ecuaciones:
+
+    $\frac{d}{{dx}}\left( {D\frac{{dc}}{{dx}}} \right) + S = 0$
+
+<!-- // ------------------------------------------------------------
+ -->
+ 				</section>
+
+<section data-background-iframe="https://www.latex-tutorial.com/tutorials/amsmath/" data-background-interactive>
+	<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,95), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(180, 180, 180, 0.9); color: #00f; padding: bb20px; font-size: 20px; text-align: right;">
+		<h2>Consulta de sintaxis</h2>
+		<p>especifico para ecuaciones.</p>
+	</div>
+</section>
+
+<section data-markdown
+         data-separator="^___"
+         data-separator-vertical="^---"
+         data-separator-notes="^Note:"
+         data-charset="iso-8859-15">
+	<textarea data-template>
+
+    $\frac{d}{{dx}}\left( {D\frac{{dc}}{{dx}}} \right) + S = 0$
+    aca hay algun tema con las ecuaciones
+---
+
+### retomando Markdown
+
+    $\frac{d}{{dx}}\left( {D\frac{{dc}}{{dx}}} \right) + S = 0$
+
+	</textarea>
+</section>
+
+<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
+						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+							<h2>Video de fondo, por la dudas</h2>
+							<pre><code class="hljs html" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+						</div>
+</section>
+
 			</div>
 		</div>
 
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
 				]
 			});
 		</script>

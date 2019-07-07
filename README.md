@@ -1,5 +1,7 @@
 # Medidas2
 
+## [presentación](https://ingenieriaam.github.io/medidas2) 
+
 ## Control de equipos por Python
 
 ### Equipos a controlar:
