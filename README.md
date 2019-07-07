@@ -2,6 +2,11 @@
 
 ## [presentación](https://ingenieriaam.github.io/medidas2) 
 
+usar: 
+´´´sh
+	git branch --set-upstream-to=origin gh-pages
+´´´
+
 ## Control de equipos por Python
 
 ### Equipos a controlar:
