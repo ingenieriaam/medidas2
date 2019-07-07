@@ -3,9 +3,19 @@
 ## [presentación](https://ingenieriaam.github.io/medidas2) 
 
 usar: 
-´´´sh
+```sh
 	git branch --set-upstream-to=origin gh-pages
-´´´
+```
+
+para compilación se requiere:
+```sh
+	npm install
+```
+
+para compilar:
+```sh
+	npm start
+```
 
 ## Control de equipos por Python
 
