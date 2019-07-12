@@ -54,8 +54,7 @@
 - ¿Por qué python?
 - Comandos, formatos y usos
 - Especificaciones Visa
-- Primeros pasos
-- Primeros problemas
+- Primeros pasos y Primeros problemas
 - Trabajo en proceso
 
 
@@ -84,10 +83,9 @@ vvvv
 | Analizador| Agilent N9320A |
 | Generador| Agilent N9310A |
 | Medidor de potencia | Anritsu ML2487B con sensor MA2472D  |
+</section>
 
-
-
-	</section>
+<!-- ........................................ -->
 
 
 <section>
@@ -99,6 +97,8 @@ vvvv
 <p><span class="fragment">Simple</span> <span class="fragment">con gran soporte y</span> <span class="fragment"style="text-apgn: center; font-size: 3em; text-apgn: center;"><span class="fragment highlight-red">Gratuito.</span></p>
 
 </section>
+
+<!-- ........................................ -->
 
 <section data-markdown
 	     data-separator="^hhhh"
@@ -195,31 +195,121 @@ Algunas de las funciones principales:
 >>> inst.read_bytes(n)
 >>> inst.close()
  ```
+</section>
 
-hhhh
-## Primeros pasos
-hhhh
-## Primeros problemas
-hhhh
-## Trabajo en proceso
+<!-- ........................................ -->
 
-Existing folder
-```sh
-cd existing_folder
-git init
-git remote add origin https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
-git add .
-git commit -m "Initial commit"
-git push -u origin master
-```
+<section data-background="img/pensar.svg"
+		 data-transition="none"> 
+	<h2 class="fragment fade-right">Primeros pasos</h2>
+	<h2 class="fragment fade-right">...</h2>
+</section>
+	<section data-background="img/pensar2.svg" data-transition="none">
+	<h2>Primeros pasos</h2>
+	<h2>... Primeros problemas</h2>
+</section>
+
+<!-- ........................................ -->
+<section data-markdown
+	     data-separator="^hhhh"
+	     data-separator-vertical="^vvvv"
+	     data-separator-notes="^Note:"
+	     data-charset="iso-8859-15">
+
+## Primer intento
+|||
+|-|-|
+|Analizador de especto **Agilent N9320A**|[![Agilent N9320A](img/9320AN.png)](https://www.keysight.com/en/pd-817002-pn-N9320A/rf-spectrum-analyzer-9-khz-3-ghz?cc=US&lc=eng)|
+
 vvvv
 
-Existing Git repository
-```sh
-cd existing_repo
-git remote add origin https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
-git push -u origin --all
-git push -u origin --tags
+## Agilent N9320A
+
+-----------------
+|[prueba 1]()|[resultado]()|[solución / conclusión]()|
+|-|-|-|
+|conexión Ethernet|No hay comunicación|Leer manual|
+|||![arrow](http://rochestercocktailrevival.com/assets/chopped/arrow_right_red.png)
+
+</section>
+
+<!-- ........................................ -->
+
+<section data-background-iframe="https://literature.cdn.keysight.com/litweb/pdf/N9320-90001.pdf?id=1460375" data-background-interactive>
+	<div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,95), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(10, 10, 10, 0.9); color: #aaf; font-size: 20px; text-align: center;">
+		<h2>Guia de Usuario</h2>
+		<p>En busca de respuestas</p>
+	</div>
+</section>
+
+<!-- ........................................ -->
+
+<section data-markdown
+	     data-separator="^hhhh"
+	     data-separator-vertical="^vvvv"
+	     data-separator-notes="^Note:"
+	     data-charset="iso-8859-15">
+|[prueba 2]()|[resultado]()|[solución / conclusión]()|
+|-|-|-|
+|conexión USB|solo permite seteos, no contesta query|algo anda mal|
+
+vvvv
+
+|[prueba 3]()|[resultado]()|[solución / conclusión]()|
+|-|-|-|
+|conexión USB con librerias propietarias|funciona de forma erratica y en ocaciones no establece la conexión|pensar en usar otro analizador|
+
+vvvv
+
+
+
+|[prueba 4]()|[resultado]()|[solución / conclusión]()|
+|-|-|-|
+|conexión USB y ethernet en Rigol DSA815|funciona todo lo que probamos|usaremos este equipo ![dsa](img/dsa815.jpg)|
+
+hhhh
+
+|||
+|-|-|
+|Generador de señales **Agilent N9310A**|[![Agilent N9320A](img/generator.png)](img/generator.png)|
+
+--------------
+
+vvvv
+
+## Agilent N9310A ## 
+
+-----------------
+|[pruebas]()|[resultados]()|[solución]()|
+|-|-|-|
+|conexión Ethernet|no hay port|conexión USB|
+|conexión USB|comunicación errática|[**evaluar el uso de otro generador**]()|
+|seteos basicos|eventualmente se configura como pedimos|aún falta dedicarle más tiempo|
+
+hhhh
+
+|||
+|-|-|
+|Medidor de potencia **Anritsu ML2487B con sensor MA2472D**|[![Agilent N9320A](https://www.used-line.com/picturesauto/352/11481352.jpg)](img/anritsu.png)|
+
+--------------
+
+vvvv
+
+## Anritsu ML2487B ## 
+
+-----------------
+|[pruebas]()|[resultados]()|[solución]()|
+|-|-|-|
+|conexión Ethernet|no hay port|conexión USB|
+|conexión USB|comunicación errática|[**evaluar el uso de otro generador**]()|
+|seteos basicos|eventualmente se configura como pedimos|aún falta dedicarle más tiempo|
+
+hhhh
+
+## Trabajo en proceso
+
+
 ```
 hhhh
 
@@ -227,9 +317,9 @@ Siguiendo con la prueba... ecuaciones:
 
     $\frac{d}{{dx}}\left( {D\frac{{dc}}{{dx}}} \right) + S = 0$
 
-<!-- // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
- -->
- 				</section>
+ </section>
+
+<!-- ........................................ -->
 
 <section data-background-iframe="https://www.latex-tutorial.com/tutorials/amsmath/" data-background-interactive>
 	<div style="position: absolute; width: 30%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,95), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(180, 180, 180, 0.9); color: #00f; padding: bb20px; font-size: 20px; text-align: right;">
@@ -237,6 +327,8 @@ Siguiendo con la prueba... ecuaciones:
 		<p>especifico para ecuaciones.</p>
 	</div>
 </section>
+
+<!-- ........................................ -->
 
 <section data-markdown
          data-separator="^hhhh"
@@ -256,6 +348,8 @@ vvvv
 	</textarea>
 </section>
 
+<!-- ........................................ -->
+
 <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
 						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
 							<h2>Video de fondo, por la dudas</h2>
@@ -263,11 +357,11 @@ vvvv
 						</div>
 </section>
 
-			</div>
+<!-- ........................................ -->
+
+	</div>
 		</div>
-
 		<script src="js/reveal.js"></script>
-
 		<script>
 			Reveal.initialize({
 				controls: true,
