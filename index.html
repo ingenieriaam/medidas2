@@ -90,12 +90,12 @@ vvvv
 
 <section>
 <h2>¿Por qué <img src="https://www.python.org/static/img/python-logo.png" alt="" width="270" height="70" /> ?</h2>
-<p class="fragment fade-right">Lenguaje interpretado</p>
-<p class="fragment fade-right">Colaborativo</p>
-<p class="fragment fade-right">Disponibilidad de librerias</p>
-<p class="fragment fade-right">Desarrollos y pruebas rapidas</p>
-<p class="fragment fade-right">Portable entre sistemas operativos</p>
-<p><span class="fragment">Simple</span> <span class="fragment">con gran soporte y</span> <span class="fragment"style="text-apgn: center; font-size: 3em; text-apgn: center;"><span class="fragment highlight-red">Gratuito.</span></p>
+<p class="fragment fade-right">Lenguaje interpretado,</p>
+<p class="fragment fade-right">Colaborativo,</p>
+<p class="fragment fade-right">Posee gran disponibilidad de librerias,</p>
+<p class="fragment fade-right">Permite desarrollos y pruebas rapidas,</p>
+<p class="fragment fade-right">Es gratuito.</p>
+<p><span class="fragment">Ademas es simple</span> <span class="fragment">con gran soporte y</span> <span class="fragment"style="text-apgn: center; font-size: 3em; text-apgn: center;"><span class="fragment highlight-red">Portable.</span></p>
 
 </section>
 
@@ -154,7 +154,7 @@ vvvv
 mayor complejidad
 
 ```py
-[:SENSe]:ACPower:BANDwidth:INTegration <\freq>
+[:SENSe]:ACPower:BANDwidth:INTegration <freq>
 [:SENSe]:ACPower:BANDwidth:INTegration?
 # subsystem | función | opciones de set y consulta | parametros
 ```
@@ -227,7 +227,7 @@ vvvv
 ## Agilent N9320A
 
 -----------------
-|[prueba 1]()|[resultado]()|[solución / conclusión]()|
+|[Prueba 1]()|[Resultado]()|[|[Conclusión]()|
 |-|-|-|
 |conexión Ethernet|No hay comunicación|Leer manual|
 |||![arrow](http://rochestercocktailrevival.com/assets/chopped/arrow_right_red.png)
@@ -250,23 +250,23 @@ vvvv
 	     data-separator-vertical="^vvvv"
 	     data-separator-notes="^Note:"
 	     data-charset="iso-8859-15">
-|[prueba 2]()|[resultado]()|[solución / conclusión]()|
+|[Prueba 2]()|[Resultado]()|[|[Conclusión]()|
 |-|-|-|
-|conexión USB|solo permite seteos, no contesta query|algo anda mal|
+|Conexión USB|Solo permite seteos, no contesta query|Algo anda mal|
 
 vvvv
 
-|[prueba 3]()|[resultado]()|[solución / conclusión]()|
+|[Prueba 3]()|[Resultado]()|[|[Conclusión]()|
 |-|-|-|
-|conexión USB con librerias propietarias|funciona de forma erratica y en ocaciones no establece la conexión|pensar en usar otro analizador|
+|Conexión USB con librerias propietarias|Funciona de forma erratica y en ocaciones no establece la conexión|Pensar en usar otro analizador|
 
 vvvv
 
 
 
-|[prueba 4]()|[resultado]()|[solución / conclusión]()|
+|[Prueba 4]()|[Resultado]()|[|[Conclusión]()|
 |-|-|-|
-|conexión USB y ethernet en Rigol DSA815|funciona todo lo que probamos|usaremos este equipo ![dsa](img/dsa815.jpg)|
+|Conexión USB y ethernet en Rigol DSA815|Funciona todo lo que probamos|Usaremos este equipo ![dsa](img/dsa815.jpg)|
 
 hhhh
 
@@ -281,11 +281,11 @@ vvvv
 ## Agilent N9310A ## 
 
 -----------------
-|[pruebas]()|[resultados]()|[solución]()|
+|[Pruebas]()|[Resultados]()|[Conclusión]()|
 |-|-|-|
-|conexión Ethernet|no hay port|conexión USB|
-|conexión USB|comunicación errática|[**evaluar el uso de otro generador**]()|
-|seteos basicos|eventualmente se configura como pedimos|aún falta dedicarle más tiempo|
+|Conexión Ethernet|No hay port|Conexión USB|
+|Conexión USB|Comunicación errática|[**Evaluar el uso de otro generador**]()|
+|Seteos basicos|Eventualmente se configura como pedimos|Aún falta dedicarle más tiempo|
 
 hhhh
 
@@ -300,23 +300,74 @@ vvvv
 ## Anritsu ML2487B ## 
 
 -----------------
-|[pruebas]()|[resultados]()|[solución]()|
+
+|[Prueba 1]()|[Resultados]()|[Conclusión]()|
 |-|-|-|
-|conexión Ethernet|no hay port|conexión USB|
-|conexión USB|comunicación errática|[**evaluar el uso de otro generador**]()|
-|seteos basicos|eventualmente se configura como pedimos|aún falta dedicarle más tiempo|
+| Conexión Ethernet | Se debe conocer la IP | Usar IP fija o verla en la configuración del instrumento |
 
-hhhh
+vvvv
 
-## Trabajo en proceso
+|[Prueba 2]()|[Resultados]()|[Conclusión]()|
+|-|-|-|
+|Utilización de pyVisa | No funcionó | Buscar alternativa |
+
+vvvv
+
+|[Prueba 3]()|[Resultados]()|[Conclusión]()|
+|-|-|-|
+|Página web hosteada en el instrumento| Interfaz poco práctica | Comunicarse con la web de forma programática |
+
+vvvv
+
+## Conclusión
+-------------
+Se utilizó una solución programática para interactuar con el sitio web.
+
+## python + [cURL](https://curl.haxx.se/)
 
 
-```
-hhhh
+</section>
 
-Siguiendo con la prueba... ecuaciones:
+<!-- ........................................ -->
 
-    $\frac{d}{{dx}}\left( {D\frac{{dc}}{{dx}}} \right) + S = 0$
+<section data-markdown
+		 data-background="img/work.svg"
+	     data-separator="^hhhh"
+	     data-separator-vertical="^vvvv"
+	     data-separator-notes="^Note:"
+	     data-charset="iso-8859-15">
+
+## Proximamente ...
+
+</section>
+
+<!-- ........................................ -->
+
+<section data-markdown
+	     data-separator="^hhhh"
+	     data-separator-vertical="^vvvv"
+	     data-separator-notes="^Note:"
+	     data-charset="iso-8859-15">
+
+## [Desafíos]() 
+
+-----------------------
+
+- Mayor conocimiento del instrumental
+- Conocer el correcto modo de manipulación
+- Adaptar los comandos a un formato más "amigable"
+- Verificar el funcionamiento de los códigos generados 
+
+vvvv
+
+## [Dificultades]() 
+
+-----------------------
+
+- Disponibilidad de tiempo de desarrollo
+- Parte del instrumental no está siempre a disposición
+- Pedir en prestamo del instrumental es riesgoso 
+- Numeroso set de comandos (aprox 200 por instrumento)
 
  </section>
 
