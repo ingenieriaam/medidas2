@@ -1,11 +1,14 @@
 # Medidas2
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ingenieriaam/medidas2/master)
+
+
 ## Control de equipos por Python
 
 ### Equipos a controlar:
  * [analizador de espectro Agilent 9320A](https://www.keysight.com/en/pd-817002-pn-N9320A/rf-spectrum-analyzer-9-khz-3-ghz?cc=US&lc=eng) - no pudo controlarse
  * [analizador de espectro Rigol DSA815](https://beyondmeasure.rigoltech.com/acton/attachment/1579/f-06f0/1/-/-/-/-/dsa800programpdf.pdf) - actualmente en proceso 
- * [generador de señal Agilent 9310A](https://www.keysight.com/en/pdx-x202262-pn-N9310A/rf-signal-generator-9-khz-to-3-ghz?cc=AR&lc=eng)
+ * [generador de seÃ±al Agilent 9310A](https://www.keysight.com/en/pdx-x202262-pn-N9310A/rf-signal-generator-9-khz-to-3-ghz?cc=AR&lc=eng)
  * [medidor de potencia](https://www.anritsu.com/en-US/test-measurement/products/ml2487b) y [sensor](https://www.bellnw.com/manufacturer/Anritsu/MA2472D.htm)
 ___
 
