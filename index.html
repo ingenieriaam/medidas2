@@ -29,80 +29,179 @@
 			<div class="slides">			
 
 <!-- INICIO DE LA PRESENTACIÓN -->			
-	<section data-background="fondo_me2.png">
-						<h2>Medidas Electrónicas 2 </h2>
-						<p>Control virtual de intrumentos de medición</p>
+	<section data-background="img/fondo.svg">
+		<div style="position: absolute; width: 70%; height:500% ; left: -10%;top:1000%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(1, 1, 1, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">		
+		<h2>Control virtual de instrumentos de medicion
+		<img src="https://sceu.frba.utn.edu.ar/nochedelosmuseos/logoutnba.png" alt="" width="320" height="116" /> </h2>
+		</div>
 	</section>
 
-				<section data-markdown
-					         data-separator="^hhhh"
-					         data-separator-vertical="^vvvv"
-					         data-separator-notes="^Note:"
-					         data-charset="iso-8859-15">
+	<section data-markdown
+			 data-background="fondo.png"
+		     data-separator="^hhhh"
+		     data-separator-vertical="^vvvv"
+		     data-separator-notes="^Note:"
+		     data-charset="iso-8859-15">
 
-<!-- // ------------------------------------------------------------------------------ -->
- ## 
- [![UTNBA](https://aga.frba.utn.edu.ar/wp-content/uploads/2017/07/logo-utn-frba-300x115.png)](https://www.frba.utn.edu.ar/)
- ### 
+<!-- ........................................ -->
+### Sistema de control virtual de instrumentos
 
-hhhh
+ ### Agenda:
 
-### Sistema de control virtual de instrumentos.
-
- Agenda:
 ---------------
 
 - Objetivos
-- Protocolo Visa
--  ¿Por qué python?[![python](https://d1q6f0aelx0por.cloudfront.net/product-logos/6bd224a8-e827-4593-b5b4-483338e9999e-python.png)](https://www.python.org/)
+- ¿Por qué python?
 - Comandos, formatos y usos
+- Especificaciones Visa
 - Primeros pasos
 - Primeros problemas
 - Trabajo en proceso
 
-hhhh
 
-### Contenido ###
 
-Este repositorio contiene los documentos requeridos por la catedra de [Proyecto Final](http://electron.frba.utn.edu.ar/materias.php?cod=95-0441#marca) de la carrera de [Ingenieria Electrónica](http://electron.frba.utn.edu.ar/)
-
-| Carpeta | Contenido |
-| vvvvvvvv | vvvvvvvv |
-| Iniciación | Abstract o anteproyecto |
-| Planificación | Plan de Gestion |
-| Ejecución | Diagrama en Bloques, normas, ensayos, etc |
-| Control | Minutas y fechas |
-| Cierre | Manual de Usuario, Mantenimiento, Economico, Protocolo de aceptacion |
 
 hhhh
 
-> Lo antedicho se actualiza respecto a los logros
-> y a petición de la catedra.
-> Para pruebas y avances respecto a la realización
-> por etapas del proyecto, el grupo de trabajo 
-> cuenta con sus repositorios y sistemas de datos
-> de acceso compartido, donde no se velará tanto 
-> por la prolijidad como asi se hará por los resultados.
-hhhh
+### Objetivos ###
 
-# Comandos Utiles para git #
-Git global setup
-```sh
-git config --global user.name "Agustin Matias Ortiz"
-git config --global user.email "aortiz@est.frba.utn.edu.ar"
+---------------
+
+Control de mediante software desarrollado en lenguaje de alto nivel
+
+|||
+|--------|----------|
+|[![mat](https://research-it.berkeley.edu/sites/default/files/styles/large/public/matlab-logo.jpg?itok=Zse5goL-)](https://la.mathworks.com/products/matlab.html)| [![py](https://conceptosclaros.com/wp-content/uploads/2017/01/herramientas-de-analisis-de-datos-python.png)](https://www.python.org/) |	
+
+vvvv
+
+### Equipos a controlar ###
+
+
+
+| [Equipo]() | [Modelo]() |
+| ------- | --------- |
+| Analizador| Agilent N9320A |
+| Generador| Agilent N9310A |
+| Medidor de potencia | Anritsu ML2487B con sensor MA2472D  |
+
+
+
+	</section>
+
+
+<section>
+<h2>¿Por qué <img src="https://www.python.org/static/img/python-logo.png" alt="" width="270" height="70" /> ?</h2>
+<p class="fragment fade-right">Lenguaje interpretado</p>
+<p class="fragment fade-right">Colaborativo</p>
+<p class="fragment fade-right">Disponibilidad de librerias</p>
+<p class="fragment fade-right">Desarrollos y pruebas rapidas</p>
+<p><span class="fragment">Simple</span> <span class="fragment">con gran soporte y</span> <span class="fragment"style="text-apgn: center; font-size: 3em; text-apgn: center;"><span class="fragment highlight-red">Gratuito.</span></p>
+
+</section>
+
+<section data-markdown
+	     data-separator="^hhhh"
+	     data-separator-vertical="^vvvv"
+	     data-separator-notes="^Note:"
+	     data-charset="iso-8859-15">
+
+
+### Comandos, formatos y usos ###
+
+---------------
+
+Comandos IEEE 488.2
+```py
+*CLS 
+*ESE 
+*ESR? 
+*IDN? 
+*OPC
+*RST
+*SRE
+*STB?
+*TRG
+*TST?
+*WAI
 ```
 vvvv
 
-Create a new repository
-```sh
-git clone https://gitlab.frba.utn.edu.ar/proyecto-final-r6051-2019/Grupo16/captor_midi.git
-cd captor_midi
-touch README.md
-git add README.md
-git commit -m "add README"
-git push -u origin master
-```
+Tipos:
+
+---------------
+
+- Read
+- Write
+- Query
+
+Ejemplos: 
+
+- *CLS limpia los registros de eventos, es tipo READ
+- IDN? consulta la identificación del equipo, es tipo QUERY
+ ```py
+>>> print(inst.query("*IDN?"))
+>>> Rigol Technologies,DSA815,DSA8A194601374,00.01.18.00.02
+>>> # modelo, número de serie, versión de software
+ ```
+
 vvvv
+
+### Comandos propios:
+
+--------------------
+mayor complejidad
+
+```py
+[:SENSe]:ACPower:BANDwidth:INTegration <\freq>
+[:SENSe]:ACPower:BANDwidth:INTegration?
+# subsystem | función | opciones de set y consulta | parametros
+```
+Admite ser del tipo write o query.
+
+vvvv
+
+Ejemplo:
+
+ ```py
+>>> # set del bandwidth del canal principal en 1 MHz.
+>>> inst.write(":SENSe:ACPower:BANDwidth:INTegration 1000000");
+>>> # la consulta retornará 1000000.
+>>> print(inst.query(":SENSe:ACPower:BANDwidth:INTegration?"))
+>>> 1000000
+ ```
+
+hhhh
+
+### Especificaciones Visa
+
+--------------------
+
+[Virtual Instrument Software Architecture.]()
+Definidas a mediados de los 90 por parte de Agilent y National Instruments, buscaba unificar los protocolos de comunicación a traves de los distintos conexionados (GPIB, RS232, USB, Ethernet). VISA es un estandar de configuración, programacion y solución a problemas comunes. Hoy en día, la mayoria de los fabricantes facilitan librerias VISA de forma gratuita y las mismas están soportadas en distintos lenguajes de programación.
+
+vvvv
+
+Libreria para Python:
+[PyVisa](https://pyvisa.readthedocs.io/en/latest/) 
+
+Algunas de las funciones principales:
+ ```py
+>>> visa.ResourceManager();
+>>> list_resources();
+>>> inst.write("cmd");
+>>> inst.read("cmd");
+>>> inst.query("cmd");
+>>> inst.read_bytes(n)
+>>> inst.close()
+ ```
+
+hhhh
+## Primeros pasos
+hhhh
+## Primeros problemas
+hhhh
+## Trabajo en proceso
 
 Existing folder
 ```sh
