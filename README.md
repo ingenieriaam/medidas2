@@ -1,6 +1,8 @@
 # Medidas2
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ingenieriaam/medidas2/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ingenieriaam/medidas2/master) generador de archivos.
+
+
 
 
 ## Control de equipos por Python
