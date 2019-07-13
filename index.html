@@ -138,7 +138,7 @@ Tipos:
 
 Ejemplos: 
 
-- *CLS limpia los registros de eventos, es tipo READ
+- *CLS limpia los registros de eventos, es tipo WRITE
 - IDN? consulta la identificación del equipo, es tipo QUERY
  ```py
 >>> print(inst.query("*IDN?"))
@@ -179,7 +179,7 @@ hhhh
 --------------------
 
 [Virtual Instrument Software Architecture.]()
-Definidas a mediados de los 90 por parte de Agilent y National Instruments, buscaba unificar los protocolos de comunicación a traves de los distintos conexionados (GPIB, RS232, USB, Ethernet). VISA es un estandar de configuración, programacion y solución a problemas comunes. Hoy en día, la mayoria de los fabricantes facilitan librerias VISA de forma gratuita y las mismas están soportadas en distintos lenguajes de programación.
+Definidas a mediados de los 90 por parte de Agilent y National Instruments, buscaba unificar los protocolos de comunicación a traves de los distintos conexionados (GPIB, RS232, USB, Ethernet). VISA es un estándar de configuración, programación y solución a problemas comunes. Hoy en día, la mayoría de los fabricantes facilitan librerías VISA de forma gratuita y las mismas están soportadas en distintos lenguajes de programación.
 
 vvvv
 
@@ -227,10 +227,11 @@ vvvv
 ## Agilent N9320A
 
 -----------------
-|[Prueba 1]()|[Resultado]()|[|[Conclusión]()|
+
+|[Prueba 1]()|[Resultado]()|[Conclusión]()|
 |-|-|-|
 |conexión Ethernet|No hay comunicación|Leer manual|
-|||![arrow](http://rochestercocktailrevival.com/assets/chopped/arrow_right_red.png)
+|||![arrow](http://rochestercocktailrevival.com/assets/chopped/arrow_right_red.png)|
 
 </section>
 
@@ -250,13 +251,13 @@ vvvv
 	     data-separator-vertical="^vvvv"
 	     data-separator-notes="^Note:"
 	     data-charset="iso-8859-15">
-|[Prueba 2]()|[Resultado]()|[|[Conclusión]()|
+|[Prueba 2]()|[Resultado]()|[Conclusión]()|
 |-|-|-|
 |Conexión USB|Solo permite seteos, no contesta query|Algo anda mal|
 
 vvvv
 
-|[Prueba 3]()|[Resultado]()|[|[Conclusión]()|
+|[Prueba 3]()|[Resultado]()|[Conclusión]()|
 |-|-|-|
 |Conexión USB con librerias propietarias|Funciona de forma erratica y en ocaciones no establece la conexión|Pensar en usar otro analizador|
 
@@ -264,7 +265,7 @@ vvvv
 
 
 
-|[Prueba 4]()|[Resultado]()|[|[Conclusión]()|
+|[Prueba 4]()|[Resultado]()|[Conclusión]()|
 |-|-|-|
 |Conexión USB y ethernet en Rigol DSA815|Funciona todo lo que probamos|Usaremos este equipo ![dsa](img/dsa815.jpg)|
 
@@ -285,7 +286,7 @@ vvvv
 |-|-|-|
 |Conexión Ethernet|No hay port|Conexión USB|
 |Conexión USB|Comunicación errática|[**Evaluar el uso de otro generador**]()|
-|Seteos basicos|Eventualmente se configura como pedimos|Aún falta dedicarle más tiempo|
+|Seteos básicos|Eventualmente se configura como pedimos|Aún falta dedicarle más tiempo|
 
 hhhh
 
@@ -366,8 +367,8 @@ vvvv
 
 - Disponibilidad de tiempo de desarrollo
 - Parte del instrumental no está siempre a disposición
-- Pedir en prestamo del instrumental es riesgoso 
-- Numeroso set de comandos (aprox 300 por instrumento)
+- Pedir en préstamo el instrumental es riesgoso 
+- Numerosos sets de comandos (aprox 300 por instrumento)
 
  </section>
 
