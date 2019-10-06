@@ -1,13 +1,13 @@
 # Medidas2
 
-## [presentación](https://ingenieriaam.github.io/medidas2) 
+## [presentaciÃ³n](https://ingenieriaam.github.io/medidas2) 
 
 usar: 
 ```sh
 	git branch --set-upstream-to=origin gh-pages
 ```
 
-para compilación se requiere:
+para compilaciÃ³n se requiere:
 ```sh
 	npm install
 ```
@@ -17,12 +17,24 @@ para compilar:
 	npm start
 ```
 
+para imprimir, agregar previo al cierre del head:
+```html
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+```
+luego, abrir el link: http://localhost:8000/?print-pdf
+
 ## Control de equipos por Python
 
 ### Equipos a controlar:
  * [analizador de espectro Agilent 9320A](https://www.keysight.com/en/pd-817002-pn-N9320A/rf-spectrum-analyzer-9-khz-3-ghz?cc=US&lc=eng) - no pudo controlarse
  * [analizador de espectro Rigol DSA815](https://beyondmeasure.rigoltech.com/acton/attachment/1579/f-06f0/1/-/-/-/-/dsa800programpdf.pdf) - actualmente en proceso 
- * [generador de señal Agilent 9310A](https://www.keysight.com/en/pdx-x202262-pn-N9310A/rf-signal-generator-9-khz-to-3-ghz?cc=AR&lc=eng)
+ * [generador de seÃ±al Agilent 9310A](https://www.keysight.com/en/pdx-x202262-pn-N9310A/rf-signal-generator-9-khz-to-3-ghz?cc=AR&lc=eng)
  * [medidor de potencia](https://www.anritsu.com/en-US/test-measurement/products/ml2487b) y [sensor](https://www.bellnw.com/manufacturer/Anritsu/MA2472D.htm)
 ___
 
